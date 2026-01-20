@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
+
 <!-- Left side navigation  -------------------------------------------------------- Left side navigation ------->
+
         <nav class="left-nav" id="leftNav">
             <div class="nav-header">
                 ☆
@@ -55,33 +57,33 @@
             </div>
         </nav>
         
-        <!-- Header with Hamburger Menu -->
+<!-- Header with Hamburger Menu ------------------------------------------ Header with Hamburger Menu -->
+
         <header>
             <button class="hamburger-menu" id="hamburgerMenu">
                 ☰
             </button>
             
             <div class="logo">
-                ♠
                 <span>Coding-Dpop</span>
             </div>
+
             
-            <div class="header-actions">
-                <!-- Need implementation later. 
-                dark & ligh mode + search.
-                <div class="search-box">
-                    <input type="text" placeholder="Search ...">
-                    <button>🔍</button>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Others Websites</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Websites</a>
+                    <a href="#about">Games</a>
+                    <a href="#contact">Random</a>
                 </div>
-                <button class="image-link">
-                    ⏏ Settings
-                </button>
-                -->
             </div>
+
         </header>
         
         <main>
-    <!-- Section 1 : cero carousel ----------------------------------------------- Section 1: hero carousel -------------->
+
+<!-- Section 1 : carousel ----------------------------------------------- Section 1 : carousel -------------->
 
             <section id="carousel-section">
                 <div class="section-title">
@@ -91,34 +93,34 @@
                 
                 <div class="hero-carousel">
                     <div class="carousel-slide active">
-                        <img src="games_images/UnrealEngine5_wallpaper_6.jpg" alt="Unreal engine 5">
+                        <img src="images/02_Games_images/UnrealEngine5_wallpaper_6.jpg" alt="Unreal engine 5">
                         <div class="carousel-overlay">
-                            <h3>GunLight</h3>
-                            <p>Ue5.4 game</p>
+                            <h3>Corrupted Levels</h3>
+                            <p>Made with Unreal Engine 5.4</p>
                             <a href="https://google.com" class="image-link" target="_blank">
-                                ⚙ View Source
+                                ⚙ View
                             </a>
                         </div>
                     </div>
 
                     <div class="carousel-slide">
-                        <img src="websites_images/nature_website.png" alt="Nature website">
+                        <img src="images/01_Websites_images/nature_website.png" alt="Nature website">
                         <div class="carousel-overlay">
                             <h3>Nature's Canvas</h3>
                             <p>Nature website</p>
                             <a href="https://google.com" class="image-link" target="_blank">
-                                ⚙ View Source
+                                ⚙ View
                             </a>
                         </div>
                     </div>
                     
                     <div class="carousel-slide">
-                        <img src="websites_images/luxurycar_website.png" alt="Misty Mountains">
+                        <img src="images/01_Websites_images/luxurycar_website.png" alt="Misty Mountains">
                         <div class="carousel-overlay">
                             <h3>Futuring</h3>
                             <p>Futuristic cars website</p>
                             <a href="https://google.com" class="image-link" target="_blank">
-                                ⚙</i> View Source
+                                ⚙ View
                             </a>
                         </div>
                     </div>
@@ -135,42 +137,72 @@
                 </div>
             </section>
             
-    <!-- Section 2 : grid gallery --------------------------------------------------- Section 3: grid gallery  ----------->
+<!-- Section 2 : grid gallery --------------------------------------------------- Section 2 : grid gallery  ----------->
 
             <section id="grid-section">
                 <div class="section-title">
                     <h2>⚙ Websites</h2>
-                    <p class="section-subtitle">websites i made</p>
+                    <p class="section-subtitle">Webites Gallery link</p>
                 </div>
                 
                 <div class="masonry-gallery">
                     <div class="masonry-item">
-                        <img src="websites_images/nature_website.png" alt="Nature website">
+                        <img src="images/01_Websites_images/nature_website.png" alt="Nature website">
                         <div class="masonry-overlay">
-                            <h3>Nature's Canvas</h3>
+                        <!--    <h3>Nature's Canvas</h3>
                             <p>Nature & trees</p>    
-                            <p>&ensp;</p>
-                            <a href="https://google.com" class="image-link" target="_blank">View Source</a>
+                            <p>&ensp;</p>-->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
                         </div>
                     </div>
                     
                     <div class="masonry-item">
-                        <img src="websites_images/luxurycar_website.png" alt="Futuristic car website">
+                        <img src="images/01_Websites_images/luxurycar_website.png" alt="Futuristic car website">
                         <div class="masonry-overlay">
-                            <h3>Futuring</h3>
+                        <!--    <h3>Futuring</h3>
                             <p>Cars sales</p>
-                            <p>&ensp;</p>
-                            <a href="https://google.com" class="image-link" target="_blank">View Source</a>
+                            <p>&ensp;</p>-->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
                         </div>
                     </div>
                     
                     <div class="masonry-item">
-                        <img src="websites_images/dashboard_website.png" alt="Dashboard website">
+                        <img src="images/01_Websites_images/dashboard_website.png" alt="Dashboard website">
                         <div class="masonry-overlay">
-                            <h3>Team Work</h3>
+                        <!--    <h3>Team Work</h3>
                             <p>Dashboard</p>
-                            <p>&ensp;</p>
-                            <a href="https://google.com" class="image-link" target="_blank">View Source</a>
+                            <p>&ensp;</p>-->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <div class="masonry-item">
+                        <img src="images/01_Websites_images/gallery_website.png" alt="Gallery website">
+                        <div class="masonry-overlay">
+                        <!--    <h3>Image Gallery</h3>
+                            <p>empty</p>
+                            <p>&ensp;</p>-->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <div class="masonry-item">
+                        <img src="images/01_Websites_images/ice_cream_site.png" alt="ice cream">
+                        <div class="masonry-overlay">
+                        <!--    <h3>Ice Cream</h3>
+                            <p>empty</p>
+                            <p>&ensp;</p>-->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
+                        </div>
+                    </div>
+
+                    <div class="masonry-item">
+                        <img src="images/01_Websites_images/aka_pixel_site.png" alt="Animal kingdom Adventure">
+                        <div class="masonry-overlay">
+                        <!--    <h3>Animal Kingdom Adventure</h3>
+                            <p>empty</p>
+                            <p>&ensp;</p>-->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
                         </div>
                     </div>
                     
@@ -178,7 +210,7 @@
                 </div>
             </section>
             
-    <!-- Section 3 : panoramic ---------------------------------------------------------  Section 4 : panoramic ------>
+<!-- Section 3 : panoramic ---------------------------------------------------------  Section 4 : panoramic ------>
 
             <section id="panoramic-section">
                 <div class="section-title">
@@ -188,10 +220,10 @@
                 
                 <div class="panoramic-gallery">
                     <div class="panoramic-item">
-                        <img src="games_images/UnrealEngine5_wallpaper_6.jpg" alt="Unreal engine 5">
+                        <img src="images/02_Games_images/UnrealEngine5_wallpaper_6.jpg" alt="Unreal engine 5">
                         <div class="panoramic-overlay">
-                            <h3>Porject 1</h3>
-                            <a href="https://google.com" class="image-link" target="_blank">View Source</a>
+                           <!-- <h3>Corrupted Leves</h3> -->
+                            <a href="https://google.com" class="image-link" target="_blank">View</a>
                         </div>
                     </div>
                     
@@ -199,7 +231,7 @@
                 </div>
             </section>
 
-    <!-- Section 5 : 2nd grid gallery -------------------------------------------- Section 2 : 2nd grid gallery ------->
+<!-- Section 4 : 2nd grid gallery -------------------------------------------- Section 4 : 2nd grid gallery ------->
 
             <section id="grid-section2">
                 <div class="section-title">
@@ -210,18 +242,10 @@
                 <div class="grid-gallery">
 
                     <div class="grid-item">
-                        <img src="images/landscape.png" alt="Tropical Beach">
+                        <img src="images/00_Icon/gear_watch_background.png" alt="Tropical Beach">
                         <div class="grid-overlay">
-                            <h3>not finished</h3>
-                            <a  class="image-link" target="_blank">View Source</a>
-                        </div>
-                    </div>
-                    
-                    <div class="grid-item">
-                        <img src="images/landscape2.png" alt="Desert Dunes">
-                        <div class="grid-overlay">
-                            <h3>Porject 1</h3>
-                            <a  class="image-link" target="_blank">View Source</a>
+                            <h3>Not Finished</h3>
+                            <a  class="image-link" target="_blank">View</a>
                         </div>
                     </div>
                     
@@ -229,7 +253,7 @@
                 </div>
             </section>
             
-    <!-- Section 4 : card gallery --------------------------------------------------------- Section 5 : card gallery -->
+<!-- Section 4 : card gallery --------------------------------------------------------- Section 4 : card gallery -->
 
             <section id="card-section">
                 <div class="section-title">
@@ -240,23 +264,23 @@
                 <div class="card-gallery">
                     <div class="card-item">
                         <div class="card-image">
-                            <img src="images/landscape.png" alt="Lake Sunset">
+                            <img src="images/00_Icon/gear_watch_background.png" alt="Lake Sunset">
                         </div>
                         <div class="card-content">
                             <h3>Not available</h3>
                             <p>C++ Cryptographie</p>
-                            <a  class="image-link" target="_blank">View Source</a>
+                            <a  class="image-link" target="_blank">View</a>
                         </div>
                     </div>  
                     
                     <div class="card-item">
                         <div class="card-image">
-                            <img src="images/landscape2.png" alt="Misty Mountains">
+                            <img src="images/00_Icon/gear_watch_background.png" alt="Misty Mountains">
                         </div>
                         <div class="card-content">
                             <h3>Not available</h3>
                             <p>Computer tracking app</p>
-                            <a  class="image-link" target="_blank">View Source</a>
+                            <a  class="image-link" target="_blank">View</a>
                         </div>
                     </div>
                     
@@ -270,10 +294,11 @@
         <section id="footer-section">
             <footer>
                 <div class="footer-content">
-                    <div class="footer-column">
+
+                    <div class="footer-column-support">
                         <h3>Support me</h3>
-                        <p><a href="#" style=" text-decoration: none;">Buy Me a Coffee</a></p>
-                        <p><a href="#" style=" text-decoration: none;">Patreon</a></p>
+                        <p><a href="#" class="support-btn coffee-btn" style=" text-decoration: none;"><i class="fas fa-coffee"></i> Buy Me a Coffee</a></p>
+                        <p><a href="#" class="support-btn patreon-btn" style=" text-decoration: none;"><i class="fab fa-patreon"></i> Patreon</a></p>
                     </div>
 
                     <div class="footer-column">
@@ -282,27 +307,26 @@
                     </div>
 
                     <div class="footer-column">
-                        <h3>social-links</h3>
-                        <p>Links to my socials</p>
+                        <h3>Social-links</h3>
+                       <!-- <p>Links to my socials</p> -->
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-discord"></i></a>
-                            <a href="#"><i class="fab fa-reddit-alien"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="" class="discord-btn"><i class="fab fa-discord"></i></a>
+                            <a href="" class="reddit-btn"><i class="fab fa-reddit-alien"></i></a>
+                            <a href="" class="github-btn"><i class="fab fa-github"></i></a>
+                            <a href="" class="youtube-btn"><i class="fab fa-youtube"></i></a>
+                            <a href="" class="twitter-btn"><i class="fab fa-twitter"></i></a>
+                            <a href="" class="tiktok-btn"><i class="fab fa-tiktok"></i></a>
                         </div>
 
                     </div>
                     
                     <div class="footer-column">
                         <h3>Quick Links</h3>
-                        <p><a href="#" style="text-decoration: none;">About me</a></p>
-                        <p><a href="#" style="text-decoration: none;">License</a></p>
-                        <p><a href="#" style="text-decoration: none;">Q & A</a></p>
-                        <p><a href="#" style="text-decoration: none;">Other</a></p>
-                        <p><a href="#" style="text-decoration: none;">News</a></p>
-
+                        <p><a href="" style="text-decoration: none;">About me</a></p>
+                        <p><a href="" style="text-decoration: none;">License</a></p>
+                        <p><a href="" style="text-decoration: none;">Q & A</a></p>
+                        <p><a href="" style="text-decoration: none;">Other</a></p>
+                        <p><a href="" style="text-decoration: none;">News</a></p>
                     </div>
                     
                     <div class="footer-column">
@@ -321,12 +345,9 @@
         </section>
 
         <div class="copyright">
-                    <p>© 2025 Coding-Dpop. All rights reserved.</p>
-                    <p>Designed on Earth &lt; Solar System &lt; Milky Way Galaxy &lt; 
-                        Local Group &lt; Virgo/Laniakea Supercluster &lt; Observable Universe.</p>
-                </div>
-        
-        
+            <p>© 2025 Coding-Dpop. All rights reserved.</p>
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>

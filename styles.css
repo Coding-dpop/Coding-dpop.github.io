@@ -72,36 +72,55 @@ body.nav-open header { /* move header to the right when nav is open */
     font-size: 1rem;
 }
 
-/* for the search and settings not used yet*/
-.header-actions { 
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 
-.search-box {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    padding: 10px 20px;
-}
+/* drop down button */
 
-.search-box input {
-    background: transparent;
-    border: none;
+.dropbtn {
+    background: linear-gradient(90deg, rgb(0, 200, 255), rgb(0, 115, 255));
     color: white;
-    padding: 0.5rem;
-    width: 200px;
-    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
 }
 
-.search-box button {
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.6);
-    cursor: pointer;
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 115, 255, 0.25);
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(90deg, rgb(0, 200, 255), rgb(0, 115, 255));
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background: linear-gradient(90deg, rgb(0, 150, 205), rgb(0, 65, 205));}
+
+.show {display: block;}
+
+
 
 /* Left-side Navigation - Closed by Default */
 .left-nav {
@@ -342,6 +361,7 @@ section:nth-child(5) {
 }
 
 /* Section 2 : Grid Gallery  AI section  ------------------------------------------ Section 2 : Grid Gallery  AI section */
+
 .grid-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -414,11 +434,10 @@ section:nth-child(5) {
 
 .masonry-overlay { /* box / top filter */
     position: absolute;
-    top: 0;
+
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -428,6 +447,7 @@ section:nth-child(5) {
     padding: 1.5rem;
     text-align: center;
 }
+
 
 .masonry-item:hover .masonry-overlay {
     opacity: 1;
@@ -439,6 +459,7 @@ section:nth-child(5) {
 }
 
 /* Section 4 : Panoramic Gallery games part ---------------------------- Section 4 : Panoramic Gallery games part*/
+
 .panoramic-gallery {
     display: flex;
     flex-direction: column;
@@ -467,13 +488,12 @@ section:nth-child(5) {
 
 .panoramic-overlay {
     position: absolute;
-    top: 50%;
     left: 0;
-    right: 0;
-    transform: translateY(-50%);
+    bottom: 0;
     background: rgba(0, 0, 0, 0);
     color: white;
-    padding: 2rem;
+    padding-left: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -483,6 +503,7 @@ section:nth-child(5) {
 }
 
 /* Section 5 : Card Gallery other project ------------------------------- Section 5 : Card Gallery other project*/
+
 .card-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -537,10 +558,12 @@ section:nth-child(5) {
 }
 
 /* Footer --------------------------------------------------------------  Footer ----------------*/
+
 footer {
     background: rgba(10, 14, 23, 0.95);
     padding: 3rem 2rem;
     border-top: 1px solid rgb(25, 25, 25);
+    min-height: 660px;
 }
 
 .footer-content {
@@ -559,8 +582,9 @@ footer {
 
 .footer-column p {
     color: rgb(255, 255, 255);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 2;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .footer-column a {
@@ -568,6 +592,61 @@ footer {
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
+
+.footer-column-support {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-column-support h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color:rgb(0, 200, 255);
+}
+
+
+.support-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.support-btn i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+.coffee-btn {
+    background: linear-gradient(135deg, #FF9671, #FFC75F);
+    color: #5a2c1d;
+    border: 2px solid #ffb347;
+}
+
+.coffee-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 150, 113, 0.3);
+}
+
+.patreon-btn {
+    background: linear-gradient(135deg, #F96854, #FF7864);
+    color: white;
+    border: 2px solid #f96854;
+}
+
+.patreon-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(249, 104, 84, 0.3);
+}
+
+/* Social Media Links ---------------- -------------*/
 
 .social-links {
     display: grid;
@@ -581,7 +660,6 @@ footer {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     color: white;
     font-size: 1.2rem;
@@ -590,21 +668,44 @@ footer {
 }
 
 .social-links a:hover { /* need a hover for each one ith the related color or not*/ 
-    background: rgb(0, 115, 255);
     transform: translateY(-5px);
 }
 
 .copyright {
     text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.4);
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding-bottom: 2rem;
 }
 
+.discord-btn {
+    background-color: #5865F2;
+}
+
+.reddit-btn {
+    background-color: #FF4500;
+}
+
+.github-btn {
+    background-color: #333333;
+}
+
+.youtube-btn {
+    background-color: #FF0000;
+}
+
+.twitter-btn {
+    background-color: #1DA1F2;
+}
+
+.tiktok-btn {
+    background-color: #000000;
+}
+
 /* Responsive design -------------------------------------------------------  Responsive design ---- */
+
 @media (max-width: 1200px) {
     .masonry-gallery {
         column-count: 2;
@@ -663,9 +764,6 @@ footer {
         font-size: 1.8rem;
     }
     
-    .header-actions {
-        display: none;
-    }
     
     .panoramic-overlay h3 {
         font-size: 1.5rem;

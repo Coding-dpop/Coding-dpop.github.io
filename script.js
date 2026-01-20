@@ -4,7 +4,6 @@ const leftNav = document.getElementById('leftNav');
 const hamburgerMenu = document.getElementById('hamburgerMenu');
 const body = document.body;
 
-// Toggle navigation
 
 hamburgerMenu.addEventListener('click', () => {
     leftNav.classList.toggle('open');
@@ -43,13 +42,12 @@ document.querySelectorAll('.nav-item').forEach(link => {
             item.classList.remove('active');
         });
         
-        // Add active class to clicked link
 
         this.classList.add('active');
         
         // Close navigation on mobile after clicking
 
-        if (window.innerWidth <= 992 && leftNav.classList.contains('open')) {
+        if (window.innerWidth <= 800 && leftNav.classList.contains('open')) {
             leftNav.classList.remove('open');
             body.classList.remove('nav-open');
             const icon = hamburgerMenu.querySelector('i');
@@ -148,49 +146,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
  // Add active class to current section in view based on the top of the section
 
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navItems = document.querySelectorAll('.nav-item');
-            
-            let currentSection = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            
-            // change active state when scrolling
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    let currentSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    // change active state when scrolling
 
-            navItems.forEach(item => {
-                const href = item.getAttribute('href');
-                if (href && href !== '#') {
-                    item.classList.remove('active');
-                    if (href === `#${currentSection}`) {
-                        item.classList.add('active');
-                    }
-                }
-            });
-        });
-
-
-
-// Search functionality not used yet TO DO later
-
-const searchInput = document.querySelector('.search-box input');
-const searchButton = document.querySelector('.search-box button');
-
-searchButton.addEventListener('click', () => {
-    if (searchInput.value.trim()) {
-        alert(`Searching for: "${searchInput.value}"`);
-        searchInput.value = '';
-    }
+    navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (href && href !== '#') {
+            item.classList.remove('active');
+            if (href === `#${currentSection}`) {
+                item.classList.add('active');
+            }
+        }
+    });
 });
 
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' && searchInput.value.trim()) {
-        alert(`Searching for: "${searchInput.value}"`);
-        searchInput.value = '';
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
-});
+  }
+}
